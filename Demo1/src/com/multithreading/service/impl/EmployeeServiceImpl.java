@@ -1,0 +1,20 @@
+package com.multithreading.service.impl;
+
+import com.multithreading.repository.EmployeeRepository;
+
+
+public class EmployeeServiceImpl extends Thread {
+	private EmployeeRepository employeeRepository;
+
+	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+		super();
+		this.employeeRepository = employeeRepository;
+	}
+	
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName() + " started fetching from : " + employeeRepository);
+		employeeRepository.displayEmployees();
+		System.out.println(Thread.currentThread().getName() + " finished fetching from : " + employeeRepository);
+	}
+}
