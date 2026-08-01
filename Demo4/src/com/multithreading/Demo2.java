@@ -25,8 +25,9 @@ public class Demo2 extends Thread {
 			for (int i = 0; i < NUM_THREADS; ++i) {
 				threads[i].join();
 			}
-			System.out.println("Actual count = " + counterUtil.getCount() + " vs. Expected count = "
-					+ (NUM_THREADS * NUM_INCREMENTS));
+			System.out.println(
+					"Actual count = " + counterUtil.getCount() + 
+					" vs. Expected count = " + (NUM_THREADS * NUM_INCREMENTS));
 		} while (counterUtil.getCount() == (NUM_THREADS * NUM_INCREMENTS));
 	}
 

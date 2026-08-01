@@ -6,15 +6,13 @@ import com.multithreading.repository.impl.EmployeeRepositoryImpl2;
 import com.multithreading.repository.impl.EmployeeRepositoryImpl3;
 import com.multithreading.service.impl.EmployeeServiceImpl;
 
-/**
- * @author abhishekvermaa10
- *
- */
+
 public class Demo2 {
 	public static void main(String[] args) {
 		System.out.println(Thread.currentThread().getName() + " started fetching");
 		EmployeeServiceImpl employeeServiceImpl = null;
-		EmployeeRepository[] employeeRepositories = { new EmployeeRepositoryImpl1(), new EmployeeRepositoryImpl2(),
+		EmployeeRepository[] employeeRepositories = { new EmployeeRepositoryImpl1(), 
+				new EmployeeRepositoryImpl2(),
 				new EmployeeRepositoryImpl3() };
 		
 		long startTime = System.currentTimeMillis();

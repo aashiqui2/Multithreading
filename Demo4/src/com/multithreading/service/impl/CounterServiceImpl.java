@@ -15,4 +15,8 @@ public class CounterServiceImpl implements CounterService {
 	public void incrementCount() {
 		++count;
 	}
+	//Step 1: Read count
+	//Step 2: Add 1
+	//Step 3: Store back
+	// race condition
 }
